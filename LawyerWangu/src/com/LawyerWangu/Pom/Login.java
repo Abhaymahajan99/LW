@@ -15,6 +15,8 @@ public class Login {
 	@FindBy(xpath="//a[.=\"Log In\"]")
 	private WebElement login;
 	
+	
+	
 	@FindBy(name="login_username")
 	private WebElement untbx;
 	@FindBy(name="login_password")
@@ -22,8 +24,11 @@ public class Login {
 	@FindBy(id="login_button")
 	private WebElement lgbtn;
 	
+	
+	
 	@FindBy(xpath="//div[@id=\"logo\"]")
 	private WebElement logo;
+	
 	//(//a[@title="Lawyer Wangu"])[1]
 	
 
@@ -38,7 +43,10 @@ public class Login {
 		pwtxb.sendKeys(pw);
 		lgbtn.click();
 		
+		
 		logo.click();
+		
+		
 		
 		}
 

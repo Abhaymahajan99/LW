@@ -9,8 +9,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 
- 
+ @Listeners
 
 public class ListenersImplementation extends BaseClassLW implements ITestListener
 {
@@ -29,6 +30,7 @@ public class ListenersImplementation extends BaseClassLW implements ITestListene
 
 	@Override
 	public void onTestFailure(ITestResult result) {
+		
 		String name = result.getName();
 		TakesScreenshot t=(TakesScreenshot) driver;
 		File src = t.getScreenshotAs(OutputType.FILE);
